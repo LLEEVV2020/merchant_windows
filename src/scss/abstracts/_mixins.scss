@@ -1,3 +1,4 @@
+/*display: flex*/
 @mixin flex ($justify-content: null, $align-items: null, $flex-wrap:null, $flex-direction: null) {
 	display: flex;
 	justify-content: $justify-content;
@@ -5,11 +6,21 @@
 	flex-wrap: $flex-wrap;
 	flex-direction: $flex-direction;
 }
-
+/*псевдоэлемент*/
 @mixin pseudo ($content: '') {
 	content: $content;
 	display: block;
 }
+/*фон*/
+@mixin background ($img) {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: $img;
+}
+
+
+
 
 @mixin pos ($position: null, $top: null, $bottom: null, $left: null, $right: null) {
 	position: $position;
@@ -28,12 +39,6 @@
 	text-align: $text-align;
 }
 
-@mixin background ($img) {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-image: $img;
-}
 
 
 @mixin border($border-width: null, $border-style: solid, $border-color: null) {
