@@ -21,56 +21,6 @@
 
 
 
-
-@mixin pos ($position: null, $top: null, $bottom: null, $left: null, $right: null) {
-	position: $position;
-	top: $top;
-	bottom: $bottom;
-	left: $left;
-	right: $right;
-}
-
-
-@mixin font ($font-size: null, $line-height: null, $font-weight: null, $text-align: null, $text-transform: null) {
-	font-size: $font-size;
-	line-height: $line-height;
-	text-transform: $text-transform;
-	font-weight: $font-weight;
-	text-align: $text-align;
-}
-
-
-
-@mixin border($border-width: null, $border-style: solid, $border-color: null) {
-	border-width: $border-width;
-	border-style: $border-style;
-	border-color: $border-color;
-}
-
-@mixin colors($text, $background, $border) {
-	color: $text;
-	background-color: $background;
-	border-color: $border;
-}
-
-@mixin wh ($width: $width, $height: $width) {
-	width: $width;
-	height: $height;
-}
-
-@mixin wh-px ($width: $width, $height: $width) {
-	width: #{$width}px;
-	height: #{$height}px;
-}
-
-
-
-@mixin adaptive-font($maxSizeFont, $minSizeFont, $maxWidth, $minWidth) {
-	$sizeFont: $maxSizeFont - $minSizeFont;
-	$maxWidth: $maxWidth - $minWidth;
-	font-size: calc(#{$minSizeFont + px} + #{$sizeFont} * ((100vw - #{$minWidth + px}) / #{$maxWidth}));
-}
-
 /* -----------------------------------------------------------------
                        @media
 1-ый параметр $min-max принимает 3 аргумента min, max, min-max.
@@ -136,4 +86,56 @@
 
 	}
 
+}
+
+
+//////////////////////////////////////////////
+
+@mixin pos ($position: null, $top: null, $bottom: null, $left: null, $right: null) {
+	position: $position;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+}
+
+
+@mixin font ($font-size: null, $line-height: null, $font-weight: null, $text-align: null, $text-transform: null) {
+	font-size: $font-size;
+	line-height: $line-height;
+	text-transform: $text-transform;
+	font-weight: $font-weight;
+	text-align: $text-align;
+}
+
+
+
+@mixin border($border-width: null, $border-style: solid, $border-color: null) {
+	border-width: $border-width;
+	border-style: $border-style;
+	border-color: $border-color;
+}
+
+@mixin colors($text, $background, $border) {
+	color: $text;
+	background-color: $background;
+	border-color: $border;
+}
+
+@mixin wh ($width: $width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin wh-px ($width: $width, $height: $width) {
+	width: #{$width}px;
+	height: #{$height}px;
+}
+
+
+
+@mixin adaptive-font($maxSizeFont, $minSizeFont, $maxWidth, $minWidth) {
+	$sizeFont: $maxSizeFont - $minSizeFont;
+	$maxWidth: $maxWidth - $minWidth;
+	font-size: calc(#{$minSizeFont + px} + #{$sizeFont} * ((100vw - #{$minWidth + px}) / #{$maxWidth}));
 }
