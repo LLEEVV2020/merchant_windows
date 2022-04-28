@@ -33,3 +33,4 @@ npm-debug.log
 .idea
 package-lock.json
 gulp/version.json
+info.txt
