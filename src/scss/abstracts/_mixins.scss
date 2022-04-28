@@ -19,6 +19,25 @@
 	background-image: $img;
 }
 
+/**********************
+Конвертирование из px в rem 
+**********************/
+/*
+	Пример использования
+	div {
+		width: toRem(400);
+		height: toEm(400);
+	}
+*/
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+@function toEm($value) {
+    $remValue: ($value / 16) + em; 
+    @return $remValue;
+}
+
 
 
 /* -----------------------------------------------------------------
