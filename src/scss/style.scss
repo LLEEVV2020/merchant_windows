@@ -8,8 +8,8 @@
 // base
 @import "./base/normalize";
 
-// @import "fonts";
-
+// &display=swap   - чтоб шрифты грузились правильно
+@import "fonts/font";
 
 @import "./base/sections";
 @import "./base/tipography";
