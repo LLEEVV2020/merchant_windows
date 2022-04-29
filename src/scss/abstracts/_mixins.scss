@@ -32,7 +32,7 @@
 	}
 */
 @function toRem($value) {
-    $remValue: calc($value / $baseFontSize) + rem; 
+    $remValue: calc($value / 10) + rem; 
     @return $remValue;
 }
 @function toEm($value) {
