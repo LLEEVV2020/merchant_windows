@@ -6,7 +6,7 @@ body{
 }
 
 .container {
-	max-width: toRem(1523);
+	max-width: toRem($maxContainer);
 	min-width: toRem(320);
 	margin: 0 auto;
 	padding: 0 20px;
