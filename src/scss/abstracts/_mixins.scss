@@ -8,11 +8,13 @@
 	flex-wrap: $flex-wrap;
 	flex-direction: $flex-direction;
 }
+
 /*псевдоэлемент*/
 @mixin pseudo ($content: '') {
 	content: $content;
 	display: block;
 }
+
 /*фон*/
 @mixin background ($img) {
 	background-repeat: no-repeat;
@@ -32,12 +34,13 @@
 	}
 */
 @function toRem($value) {
-    $remValue: calc($value / 10) + rem; 
-    @return $remValue;
+	$remValue: calc($value / 10) + rem;
+	@return $remValue;
 }
+
 @function toEm($value) {
-	$remValue: calc($value / $baseFontSize) + em; 
-    @return $remValue;
+	$remValue: calc($value / $baseFontSize) + em;
+	@return $remValue;
 }
 
 
